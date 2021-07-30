@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 
-#Usage sshsudologin.expect <host> <ssh user> <ssh password> <cluster_id>
+#Usage to_nsx_step4 <host> <ssh user> <ssh password> <host_id> <filter_name>
 
 set timeout 60
 set hostid [lindex $argv 3]
