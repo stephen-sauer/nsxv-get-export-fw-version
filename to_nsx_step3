@@ -1,0 +1,50 @@
+#!/usr/bin/expect
+
+set timeout 60
+
+spawn ssh [lindex $argv 1]@[lindex $argv 0]
+
+expect "yes/no" {
+	send "yes\r"
+	expect "*?assword" { send "[lindex $argv 2]\r" }
+	} "*?assword" { send "[lindex $argv 2]\r" }
+
+expect "> " { send "show cluster all\r" }
+
+expect "> " { send "exit" }
+
+root@prome-mdt-dhcp412:~/exp-scripts# more to_nsx_step2
+#!/usr/bin/expect
+
+#Usage sshsudologin.expect <host> <ssh user> <ssh password> <cluster_id>
+
+set timeout 60
+
+spawn ssh [lindex $argv 1]@[lindex $argv 0]
+
+expect "yes/no" {
+	send "yes\r"
+	expect "*?assword" { send "[lindex $argv 2]\r" }
+	} "*?assword" { send "[lindex $argv 2]\r" }
+
+expect "> " { send "show cluster [lindex $argv 3]\r" }
+
+expect "> " { send "exit" }
+
+root@prome-mdt-dhcp412:~/exp-scripts# more to_nsx_step3
+#!/usr/bin/expect
+
+#Usage sshsudologin.expect <host> <ssh user> <ssh password> <cluster_id>
+
+set timeout 60
+
+spawn ssh [lindex $argv 1]@[lindex $argv 0]
+
+expect "yes/no" {
+	send "yes\r"
+	expect "*?assword" { send "[lindex $argv 2]\r" }
+	} "*?assword" { send "[lindex $argv 2]\r" }
+
+expect "> " { send "show dfw host [lindex $argv 3] getfilters \r" }
+
+expect "> " { send "exit" }
