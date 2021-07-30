@@ -12,7 +12,7 @@ copy these scripts in a folder on a ubuntu machine (or any linux machine but tes
 files named to_nsx* are expect scripts
 
 On your ubuntu machine, install expect 
-apt-get install expect
+`apt-get install expect`
 
 do a chmod of the files  (to_nsx* and *.sh) to be executables.
 
