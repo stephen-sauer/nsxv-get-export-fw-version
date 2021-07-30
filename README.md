@@ -15,7 +15,8 @@ Read_filter-export.sh connects to the NSX-V Manager using informations you have 
 config.yml:
 <IP_address_of_mgr>
 <SSH_User>
-<Password>
+<SSH_Passwd>
+
 
 If no fw on vnic -> RPC error -> Timeout but the script continues. Just taking more time to complete 
 
