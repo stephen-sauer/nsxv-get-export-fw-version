@@ -21,8 +21,8 @@
 
  do a chmod of the files  (to_nsx* and *.sh) to be executables.
 
- Read_filter-export.sh connects to the NSX-V Manager using informations you have to include in a config.yml in the same folder where the bash script is.
-#### config.yml:
+ Read_filter-export.sh connects to the NSX-V Manager using informations you have to include in a config.cfg in the same folder where the bash script is.
+#### config.cfg:
 ```
 <IP_address_of_mgr>
 <SSH_User>
