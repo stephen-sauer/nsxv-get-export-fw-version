@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mgr=$(cat config.yml | sed -n '1,1p')
+mgr=$(cat config.cfg | sed -n '1,1p')
 echo "Line contents are : $mgr"
-user=$(cat config.yml | sed -n '2,2p')
+user=$(cat config.cfg | sed -n '2,2p')
 echo "Line contents are : $user"
-passwd=$(cat config.yml | sed -n '3,3p')
+passwd=$(cat config.cfg | sed -n '3,3p')
 echo "Line contents are : $passwd"
 
 rm cluster_info
